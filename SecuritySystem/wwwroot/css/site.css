@@ -1,0 +1,38 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url('file:///C:\VisualStudio22\SecuritySystem\SecuritySystem\wwwroot\css\Image\SecuritySystem_background.jpg');
+    
+}
+.bg-image {
+    background-image: url(Image/SecuritySystem_background.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+.contain-center {
+    text-align: center;
+    width: 500px;
+    margin-left: 25%;
+   
+}
+/* Suspect list Create method Start */
+
+
+
+/* Suspect list Create method End */

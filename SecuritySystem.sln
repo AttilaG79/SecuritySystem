@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecuritySystem", "SecuritySystem\SecuritySystem.csproj", "{DF7FD3A3-12BA-47A4-B70C-5903ACAF2C25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityDataModel", "SecurityDataModel\SecurityDataModel.csproj", "{89DA26AE-AF90-4B4B-B6E9-F94B50A5CB76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF7FD3A3-12BA-47A4-B70C-5903ACAF2C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF7FD3A3-12BA-47A4-B70C-5903ACAF2C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF7FD3A3-12BA-47A4-B70C-5903ACAF2C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF7FD3A3-12BA-47A4-B70C-5903ACAF2C25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89DA26AE-AF90-4B4B-B6E9-F94B50A5CB76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89DA26AE-AF90-4B4B-B6E9-F94B50A5CB76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89DA26AE-AF90-4B4B-B6E9-F94B50A5CB76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89DA26AE-AF90-4B4B-B6E9-F94B50A5CB76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42F92F32-2AEB-46DF-BB21-44FD4CD1E9D7}
+	EndGlobalSection
+EndGlobal

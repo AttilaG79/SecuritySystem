@@ -1,0 +1,123 @@
+﻿@model SecuritySystem.ModelsViewData.SecurityDataView
+
+@{
+    ViewData["Title"] = "Create";
+  
+}
+
+<h1>Create</h1>
+
+<h4>SecurityData</h4>
+<hr />
+ <form asp-action="Create" method="post">
+<div class="row">
+    <div class="col-md-4">
+      
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SecurityData.Officer_Id" class="control-label"></label>
+                <select asp-for="SecurityData.Officer_Id" asp-items="@(new SelectList(Model.OfficerDatas,"OfficerId","OfficerName","Select Officer"))"  class="form-select">
+                    <option disabled selected>--- Select Officer ---</option>
+                </select>
+                
+                <span asp-validation-for="SecurityData.Officer_Id" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="SecurityData.Store_Id" class="control-label"></label>
+                <select asp-for="SecurityData.Store_Id" asp-items="@(new SelectList(Model.StoresDatas,"StoreId","StoreName","Select Store"))"  class="form-select">
+                    <option disabled selected>--- Select Store ---</option>
+                </select>
+                <span asp-validation-for="SecurityData.Store_Id" class="text-danger"></span>
+            </div>
+      
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="SecurityData.SuspectName" class="control-label"></label>
+                <input asp-for="SecurityData.SuspectName" class="form-control" />
+                <span asp-validation-for="SecurityData.SuspectName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecurityData.IcCode" class="control-label"></label>
+                <select asp-for="SecurityData.IcCode" class="form-select">
+                    <option value="0" disabled selected>-- Select IC Code --</option>
+                    <option value="1">IC 1</option>
+                    <option value="2">IC 2</option>
+                    <option value="3">IC 3</option>
+                    <option value="4">IC 4</option>
+                    <option value="5">IC 5</option>
+                    <option value="6">IC 6</option>
+                    <option value="7">IC 7</option>
+                </select>
+                <span asp-validation-for="SecurityData.IcCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecurityData.Sex" class="control-label"></label>               
+                <select asp-for="SecurityData.Sex" class="form-select">
+                    <option value="0" disabled selected>-- Select Gender --</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                </select>
+                <span asp-validation-for="SecurityData.Sex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecurityData.DOB" class="control-label"></label>
+                <input asp-for="SecurityData.DOB" class="form-control" />
+                <span asp-validation-for="SecurityData.DOB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecurityData.Address" class="control-label"></label>
+                <input asp-for="SecurityData.Address" class="form-control" />
+                <span asp-validation-for="SecurityData.Address" class="text-danger"></span>
+            </div>
+       
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        
+            <div class="form-group">
+                <label asp-for="SecurityData.IncidentDetails" class="control-label"></label>
+                <textarea asp-for="SecurityData.IncidentDetails" class="form-control" rows="4"></textarea>
+                <span asp-validation-for="SecurityData.IncidentDetails" class="text-danger"></span>
+            </div>
+       
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        
+            <div class="form-group">
+                <label asp-for="SecurityData.PoliceName" class="control-label"></label>
+                <input asp-for="SecurityData.PoliceName" class="form-control" />
+                @*<span asp-validation-for="SecurityData.PoliceName" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="SecurityData.PoilceBadgeNumber" class="control-label"></label>
+                <input asp-for="SecurityData.PoilceBadgeNumber" class="form-control" />
+               @*<span asp-validation-for="SecurityData.PoilceBadgeNumber" class="text-danger"></span>*@
+            </div>
+        
+    </div>
+</div>
+<div class="row">
+    <div class="text-center">
+       
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        
+    </div>
+</div>
+  </form>      
+ 
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

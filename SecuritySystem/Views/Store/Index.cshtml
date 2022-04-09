@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SecurityDataModel.StoresData>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h4 class="text-primary">Store List</h4>
+        </div>
+        <div class="col-6 text-end" >
+            <a asp-controller="Store" asp-action="Create" class="btn btn-outline-success">
+                <i class="bi bi-plus-square"></i> &nbsp; Add a New Store</a>
+        </div>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StoreName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StoreAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StorePhone)
+            </th>
+            <th>
+                <h5>Actions</h5>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StorePhone)
+            </td>
+            <td>
+                <div class="btn-group">
+                    <a asp-action="Edit" asp-route-id="@item.StoreId" class="btn btn-outline-info"><i class="bi bi-pencil-square"></i> Edit</a> &nbsp; | &nbsp;
+                    <a asp-action="Details" asp-route-id="@item.StoreId" class="btn btn-outline-secondary"><i class="bi bi-info-square"></i> Details</a> &nbsp; | &nbsp;
+                    <a asp-action="Delete" asp-route-id="@item.StoreId" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Delete</a>
+                </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

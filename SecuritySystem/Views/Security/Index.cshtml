@@ -1,0 +1,97 @@
+﻿@model IEnumerable<SecurityDataModel.SecurityData>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h4 class="text-primary">Suspect's List</h4>
+        </div>
+        <div class="col-6 text-end" >
+            <a asp-controller="Security" asp-action="Create" class="btn btn-outline-success">
+                <i class="bi bi-plus-square"></i> &nbsp; Add a new Suspect</a>
+        </div>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+             <th>
+                @Html.DisplayNameFor(model => model.Officer_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuspectName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IncidentDetails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoliceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoilceBadgeNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Store_Id)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelitem=>item.GetOfficers.OfficerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SuspectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncidentDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoliceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoilceBadgeNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GetStores.StoreId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
